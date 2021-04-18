@@ -36,6 +36,8 @@ Windows 10 Pro 20H2
 
 * https://learn.sparkfun.com/tutorials/galileo-getting-started-guide/all
 
+* https://elbruno.com/2015/01/19/intel-howto-install-intel-galileo-drivers-in-windows10/
+
 * https://www.howtogeek.com/50787/add-a-user-to-a-group-or-second-group-on-linux/
 
 &nbsp;
