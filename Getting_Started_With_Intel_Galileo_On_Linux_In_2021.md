@@ -14,7 +14,7 @@ Exposure. I live and breathe Windows, so I recently purchased a laptop and insta
 ## OSes Used
 Pop!_OS 20.20
 
-Windows 10
+Windows 10 Pro 20H2
 
 &nbsp;
 
