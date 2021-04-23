@@ -1,2 +1,6 @@
+# Common Artifacts Directories
 **/bin
 **/obj
+
+# Executables From /Hello_World
+**/_hello_world_*
