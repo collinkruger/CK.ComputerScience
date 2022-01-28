@@ -81,3 +81,17 @@ def XOR(number_of_elements:Optional[int] = None, random_state:Optional[int] = No
     return _DataGeneratorCore(source=source,
                               number_of_elements=number_of_elements,
                               random_state=random_state)
+
+
+#%%
+
+def SINEWAVE(steps:int=360) -> np.ndarray:
+
+    ValidateArgumentType("steps", int, False, steps)
+    if (steps < 1):
+        raise ValueError(f"steps is expected to be greater than or equal to one, but was given {steps}.")
+
+    X = np.linspace(0, 2 * np.pi, steps)
+    Y = np.sin(X)
+
+    return (X, Y)
