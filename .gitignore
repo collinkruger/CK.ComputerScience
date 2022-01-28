@@ -1,6 +1,14 @@
+# IDE Configuration Directories
+**/.vs
+**/.idea
+
 # Common Artifacts Directories
 **/bin
 **/obj
+**/__pycache__
 
 # Executables From /Hello_World
 **/_hello_world_*
+
+# Scikit-Learn Serialized Model Files
+*.joblib
