@@ -1,7 +1,8 @@
-import numpy as np
 import math
-from typing import *
-from ck_python_helpers import *
+
+import numpy as np
+
+from ck_numpy_helpers import *
 
 
 #%%
@@ -9,7 +10,7 @@ from ck_python_helpers import *
 def _DataGeneratorCore(source: np.ndarray,
                        number_of_elements: Optional[int],
                        random_state: Optional[int])\
-                       -> np.ndarray:
+                       -> Tuple[np.ndarray, np.ndarray]:
 
     ValidateArgumentType("source", np.ndarray, False, source)
     ValidateArgumentType("number_of_elements", int, True, number_of_elements)
@@ -22,16 +23,17 @@ def _DataGeneratorCore(source: np.ndarray,
         repetitions = 1 if number_of_elements is None else math.ceil(number_of_elements / len(source))
         source_extended = np.tile(source, (repetitions, 1))
 
-        if (random_state is not None):
-            np.random.seed(random_state)
-            np.random.shuffle(source_extended)
+        maybe_shuffle(source_extended, random_state)
 
-        return source_extended[:number_of_elements]
+        subset = source_extended[:number_of_elements]
+
+        return (subset[:, :-1],
+                subset[:, -1])
 
 
 #%%
 
-def AND(number_of_elements:Optional[int] = None, random_state:Optional[int] = None) -> np.ndarray:
+def AND(number_of_elements: Optional[int] = None, random_state: Optional[int] = None) -> Tuple[np.ndarray, np.ndarray]:
     """
     :param number_of_elements: An optional int to limit or extend the number of elements returned. If number_of_elements is greater than the length of the source truth table, the truth table is repeated, then limited in length to match number_of_elements. If number_of_elements is None or is not supplied, all rows from the source truth table are returned.
     :param random_state: An optional int to be used when shuffling the source truth table. If random_state is None or is not supplied, the source truth table will NOT be shuffled.
@@ -49,7 +51,7 @@ def AND(number_of_elements:Optional[int] = None, random_state:Optional[int] = No
 
 #%%
 
-def OR(number_of_elements:Optional[int] = None, random_state:Optional[int] = None) -> np.ndarray:
+def OR(number_of_elements: Optional[int] = None, random_state: Optional[int] = None) -> Tuple[np.ndarray, np.ndarray]:
     """
     :param number_of_elements: An optional int to limit or extend the number of elements returned. If number_of_elements is greater than the length of the source truth table, the truth table is repeated, then limited in length to match number_of_elements. If number_of_elements is None or is not supplied, all rows from the source truth table are returned.
     :param random_state: An optional int to be used when shuffling the source truth table. If random_state is None or is not supplied, the source truth table will NOT be shuffled.
@@ -67,7 +69,7 @@ def OR(number_of_elements:Optional[int] = None, random_state:Optional[int] = Non
 
 #%%
 
-def XOR(number_of_elements:Optional[int] = None, random_state:Optional[int] = None) -> np.ndarray:
+def XOR(number_of_elements: Optional[int] = None, random_state: Optional[int] = None) -> Tuple[np.ndarray, np.ndarray]:
     """
     :param number_of_elements: An optional int to limit or extend the number of elements returned. If number_of_elements is greater than the length of the source truth table, the truth table is repeated, then limited in length to match number_of_elements. If number_of_elements is None or is not supplied, all rows from the source truth table are returned.
     :param random_state: An optional int to be used when shuffling the source truth table. If random_state is None or is not supplied, the source truth table will NOT be shuffled.
@@ -85,7 +87,7 @@ def XOR(number_of_elements:Optional[int] = None, random_state:Optional[int] = No
 
 #%%
 
-def SINEWAVE(steps:int=360) -> np.ndarray:
+def SINEWAVE(steps: int = 360) -> Tuple[np.ndarray, np.ndarray]:
 
     ValidateArgumentType("steps", int, False, steps)
     if (steps < 1):
