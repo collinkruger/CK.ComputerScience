@@ -1,5 +1,5 @@
 import numpy as np
-from ck_python_helpers import *
+from ck_helpers.python_helpers import *
 
 
 def display_head(arr: np.ndarray, count:int = 10) -> None:

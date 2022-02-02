@@ -2,7 +2,7 @@ import math
 
 import numpy as np
 
-from ck_numpy_helpers import *
+from ck_helpers.numpy_helpers import *
 
 
 #%%
