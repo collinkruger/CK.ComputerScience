@@ -1,5 +1,6 @@
 # Graph Algorithms
 
+
 ## Glossary and Syntax
 
 **Graph**: Abstractly, a graph is a set of objects and the relationship between those objects.
@@ -16,7 +17,7 @@ For a directed graph a specific edge in $E$ is usually written as $(v,w)$ where 
 
 **Undirected Graph**: A graph in which the relationship between vertices is bidirectional, written as $G = (V, E)$.
 
-**Directed Graph**: A graph in which the relationship between vertices is unidirectional, written as $\overrightharpoon{G} = (V, E)$
+**Directed Graph**: A graph in which the relationship between vertices is unidirectional, written as $\overrightarrow{G} = (V, E)$
 
 **Fully Connected Graph**: Every vertex is connected to every other vertex.
 
@@ -32,8 +33,22 @@ $n$: In the context of graph algorithms, $n$ usually refers to the number of ver
 
 $m$: In the context of graph algorithms, $m$ usually refers to the number of edges of a graph. Example: $m = |E|$
 
+
+## Some Common Graphs We See Everyday
+
+**The World Wide Web**: Each page (or site, depending on your analysis) is a vertex, and each link is a directed edge.
+
+**Social Networks**: Each user is a vertex, each “follow” is a directed edge, and each friendship is an undirected edge.
+
+**Road Networks**: Each address is a vertex, each road is an undirected edge, and each one-way street is a directed edge.
+
+**Computer Networks**: Each network attached device is a vertex, and each connection between devices is (usually) a bidirectional edge.
+
+**Work Planning/Orchestration**: The precedence/dependency order of work in a project forms a graph.
+
+
 ## Continued Reading and References
 
 [Algorithms Illuminated (Part 2): Graph Algorithms and Data Structures](https://www.amazon.com/Algorithms-Illuminated-Part-Graph-Structures/dp/0999282921)
 
-[Algorithms](https://teapowered.dev/assets/ga-notes.pdf)
+[Graduate Algorithms Notes](https://teapowered.dev/assets/ga-notes.pdf)
