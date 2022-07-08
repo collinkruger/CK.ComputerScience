@@ -11,9 +11,11 @@ In the context of graph algorithms, a graph is defined as a collection of **vert
 
 **Edge**: A pairwise relationship between two vertices, the set of which is usually written as $E$.
 
-For an undirected graph a specific edge in $E$ is usually written as $\{v, w\} \in E$  where $v$ and $w$ are vertices in $E$. Sometimes this is written as $v \leftrightarrow w$. 
+For an undirected graph a specific edge in $E$
+is usually written as $\\{v, w\\} \in E$  where $v$ and $w$ are vertices in $E$. Sometimes this is written as $v \leftrightarrow w$.
 
-For a directed graph a specific edge in $E$ is usually written as $(v,w)$ where $v$ and $w$ are vertices in $E$, and the direction of the edge is from $v$ to $w$. Sometimes this is written as $v \rightarrow w$.
+For a directed graph a specific edge in $E$
+is usually written as $(v,w)$ where $v$ and $w$ are vertices in $E$, and the direction of the edge is from $v$ to $w$. Sometimes this is written as $v \rightarrow w$.
 
 **Undirected Graph**: A graph in which the relationship between vertices is bidirectional, written as $G = (V, E)$.
 
