@@ -24,7 +24,7 @@
 
 ## Graphs
 
-* [Glossary and Syntax](/Graph/GlossaryAndSyntax.md)
+* [Glossary and Syntax](./Graph/GlossaryAndSyntax.md)
 * Something
 * Minimum Spanning Tree
 * Markov Chains / PageRank (Maybe this need to be different. Maybe a separate section on what Markov Chains are.)
