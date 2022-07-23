@@ -1,56 +1,48 @@
-# Graph Algorithms
+# Algorithms
 
+## Dynamic Programming
 
-## Glossary and Syntax
+* Fibonacci Sequence
+* Longest Increasing Subsequence
+* Longest Common Subsequence
+* Knapsack
+* Knapsack With Repetition
+* Matrix Multiplication
 
-**Graph**: Abstractly, a graph is a set of objects and the relationship between those objects.
+## Randomized Algorithms
 
-In the context of graph algorithms, a graph is defined as a collection of **vertices** and **edges**, and is written as $G = (V, E)$.
+* Modular Arithmetic
+* RSA
+* Bloom Filters
 
-**Vertex**: A point/object in a graph, the set of which is usually written as $V$.
+## Divide And Conquer
 
-**Edge**: A pairwise relationship between two vertices, the set of which is usually written as $E$.
+* Fast Integer Multiplication
+* Linear-Time Median
+* Solving Recurrences (Maybe this needs to be different or not here at all)
+* FFT
 
-For an undirected graph a specific edge in $E$
-is usually written as $\\{v, w\\} \in E$  where $v$ and $w$ are vertices in $E$. Sometimes this is written as $v \leftrightarrow w$.
+## Graphs
 
-For a directed graph a specific edge in $E$
-is usually written as $(v,w)$ where $v$ and $w$ are vertices in $E$, and the direction of the edge is from $v$ to $w$. Sometimes this is written as $v \rightarrow w$.
+* [Glossary and Syntax](/Graph/GlossaryAndSyntax.md)
+* Something
+* Minimum Spanning Tree
+* Markov Chains / PageRank (Maybe this need to be different. Maybe a separate section on what Markov Chains are.)
+* Maybe some other stuff
 
-**Undirected Graph**: A graph in which the relationship between vertices is bidirectional, written as $G = (V, E)$.
+## References
 
-**Directed Graph**: A graph in which the relationship between vertices is unidirectional, written as $\overrightarrow{G} = (V, E)$
+This collection of one-pagers will largely follow the outline of [CS 6515 : Intro to Graduate Algorithms](https://omscs.gatech.edu/cs-8803-ga-graduate-algorithms).<br>
 
-**Fully Connected Graph**: Every vertex is connected to every other vertex.
-
-**Walk**: Traversing a graph, visiting vertices any number of times.
-
-**Path**: A path from from $v$ to $w$ without visiting a vertex multiple times.
-
-**Cycle**: A path through a graph that begins and ends at the same vertex.
-
-**Degree Of A Vertex**: The number of edges a vertex has.
-
-$n$: In the context of graph algorithms, $n$ usually refers to the number of vertices of a graph. Example: $n = |V|$
-
-$m$: In the context of graph algorithms, $m$ usually refers to the number of edges of a graph. Example: $m = |E|$
-
-
-## Some Common Graphs We See Everyday
-
-**The World Wide Web**: Each page (or site, depending on your analysis) is a vertex, and each link is a directed edge.
-
-**Social Networks**: Each user is a vertex, each “follow” is a directed edge, and each friendship is an undirected edge.
-
-**Road Networks**: Each address is a vertex, each road is an undirected edge, and each one-way street is a directed edge.
-
-**Computer Networks**: Each network attached device is a vertex, and each connection between devices is (usually) a bidirectional edge.
-
-**Work Planning/Orchestration**: The precedence/dependency order of work in a project forms a graph.
-
-
-## Continued Reading and References
-
-[Algorithms Illuminated (Part 2): Graph Algorithms and Data Structures](https://www.amazon.com/Algorithms-Illuminated-Part-Graph-Structures/dp/0999282921)
-
-[Graduate Algorithms Notes](https://teapowered.dev/assets/ga-notes.pdf)
+Other algorithms, references, resources will include
+* [Graduate Algorithms Notes](https://teapowered.dev/assets/ga-notes.pdf)
+* The [Algorithms Illuminated](http://algorithmsilluminated.org/) book series
+  * [Part 1: The Basics](https://www.amazon.com/dp/0999282905)
+  * [Part 2: Graph Algorithms and Data Structures](https://www.amazon.com/dp/0999282921)
+  * [Part 3: Greedy Algorithms and Dynamic Programming](https://www.amazon.com/dp/0999282948)
+  * [Part 4: Algorithms for NP-Hard Problems](https://www.amazon.com/dp/0999282964)
+* The Algorithms Illuminated YouTube series
+  * [Part 1: The Basics](https://www.youtube.com/playlist?list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_)
+  * [Part 2: Graph Algorithms and Data Structures](https://www.youtube.com/playlist?list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P)
+  * [Part 3: Greedy Algorithms and Dynamic Programming](https://www.youtube.com/playlist?list=PLEGCF-WLh2RI5H8JBWxq0Q4AN7XVaj-h-)
+  * [Part 4: Algorithms for NP-Hard Problems](https://www.youtube.com/playlist?list=PLEGCF-WLh2RK6lq3iSsiU84rWVee3A-hz)
